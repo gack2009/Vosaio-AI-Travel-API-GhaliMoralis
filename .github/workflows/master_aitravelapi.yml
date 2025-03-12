@@ -1,12 +1,12 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - BookingAPI
+name: Build and deploy ASP.Net Core app to Azure Web App - AITravelAPI
 
 on:
   push:
     branches:
-      - master
+      - master # it's main branch in this project
   workflow_dispatch:
 
 jobs:
@@ -25,10 +25,10 @@ jobs:
           dotnet-version: '9.x'
 
       - name: Build with dotnet
-        run: dotnet build WebApplication1/BookingSystem.sln --configuration Release
+        run: dotnet build WebApplication1/AITravel.sln --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish WebApplication1/BookingAPI.csproj -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+        run: dotnet publish WebApplication1/AITravelAPI.csproj -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -41,7 +41,7 @@ jobs:
 
       - name: Run EF Migrations on Azure SQL Database
         run: |
-          dotnet ef database update --project Infrastructure --startup-project WebApplication1 --connection "Server=tcp:hotelbooking-sql123.database.windows.net,1433;Initial Catalog=HotelBookingDB;Persist Security Info=False;User ID=Gazureadmin;Password=${{ secrets.AZURE_SQL_PASSWORD }};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+          dotnet ef database update --project Infrastructure --startup-project WebApplication1 --connection "Server=tcp:AITravelAPI-sql123.database.windows.net,1433;Initial Catalog=AITravelAPIDB;Persist Security Info=False;User ID=Gazureadmin;Password=${{ secrets.AZURE_SQL_PASSWORD }};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
   deploy:
     runs-on: windows-latest
@@ -70,7 +70,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'BookingAPI'
+          app-name: 'AITravelAPI'
           slot-name: 'Production'
           package: .
           

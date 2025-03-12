@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Hotels;
+namespace Application.Itinerary;
 
 public class HotelDto
 {
-    public Guid Id { get; set; }
     public string Name { get; set; }
-    public List<RoomDto> Rooms { get; set; }
+    public decimal CostPerNight { get; set; }
 }

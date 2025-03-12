@@ -14,10 +14,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 
     }
 
-    public DbSet<Hotel> Hotels => Set<Hotel>();
-    public DbSet<Room> Rooms => Set<Room>();
-    public DbSet<Booking> Bookings => Set<Booking>();
-
+    public DbSet<Itinerary> Itineraries { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

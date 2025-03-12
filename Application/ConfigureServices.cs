@@ -1,6 +1,4 @@
-﻿using Application.Bookings;
-using Application.Hotels;
-using Application.Rooms;
+﻿using Application.Itinerary;
 using FluentValidation;
 using System.Reflection;
 
@@ -15,9 +13,7 @@ public static class ConfigureServices
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
         //Add Services - there are some better ways to add services but i will go with this for now
-        services.AddScoped<IBookingService, BookingService>();
-        services.AddScoped<IHotelService, HotelService>();
-        services.AddScoped<IRoomService, RoomService>();
+        services.AddScoped<IItineraryService, ItineraryService>();
 
         return services;
     }
