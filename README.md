@@ -3,6 +3,7 @@
 ## 📌 Overview
 This is a **Itineray Generator API** built using **ASP.NET Core** with **Entity Framework Core (EF Core)** following **Clean Architecture** and **RESTful** principles. It allows users to:
 - Generate a travel plan based on destination, date of travel, budget, and interests
+- There is github actions file included as an example of how to deploy the app you can find it in ```.github/workflows``` directory
 - The follow up Answers are in ```FollowUp_Answers.md```
 
 ## 🏗️ Solution Structure
@@ -11,7 +12,7 @@ This is a **Itineray Generator API** built using **ASP.NET Core** with **Entity 
  ├── /Presentation (Startup project, contains `Program.cs`, controllers)
    ├── /AUTravekAPI
  ├── /Application (Contains interfaces, CQRS handlers, business logic)
- ├── /Infrastructure (Contains `DbContext`, database-related logic)
+ ├── /Infrastructure (Contains `DbContext`, database-related logic, external api integration)
  ├── /Domaint (Contains entity models)
 ```
 

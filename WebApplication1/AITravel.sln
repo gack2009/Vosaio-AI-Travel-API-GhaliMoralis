@@ -25,6 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.IntegrationT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F696159E-8EC8-4F54-B9C6-FB8A13999D9E}"
 	ProjectSection(SolutionItems) = preProject
+		FollowUp_Answers.md = FollowUp_Answers.md
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
