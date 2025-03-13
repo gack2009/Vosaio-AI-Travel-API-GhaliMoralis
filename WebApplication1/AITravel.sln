@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.UnitTests", "..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AITravelAPI.UnitTest", "..\AITravelAPI.UnitTest\AITravelAPI.UnitTest.csproj", "{9E64B4CA-7121-4394-9B93-A324D6D5AC6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.IntegrationTest", "..\Infrastructure.IntegrationTest\Infrastructure.IntegrationTest.csproj", "{B565EF6F-5D9E-4521-8ED2-EE4405541AF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9E64B4CA-7121-4394-9B93-A324D6D5AC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E64B4CA-7121-4394-9B93-A324D6D5AC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E64B4CA-7121-4394-9B93-A324D6D5AC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B565EF6F-5D9E-4521-8ED2-EE4405541AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B565EF6F-5D9E-4521-8ED2-EE4405541AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B565EF6F-5D9E-4521-8ED2-EE4405541AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B565EF6F-5D9E-4521-8ED2-EE4405541AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,5 +69,6 @@ Global
 		{B76B8652-D0E9-4553-86A1-7D7A02911E16} = {8EFD1897-0272-4C1C-9590-A2161E32386C}
 		{646EC453-4C08-4800-8AD9-880F5E3803BB} = {57902A60-1E12-458B-A238-1F0FC604273D}
 		{9E64B4CA-7121-4394-9B93-A324D6D5AC6E} = {57902A60-1E12-458B-A238-1F0FC604273D}
+		{B565EF6F-5D9E-4521-8ED2-EE4405541AF7} = {57902A60-1E12-458B-A238-1F0FC604273D}
 	EndGlobalSection
 EndGlobal
